@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lider Board</title>
+	<link rel="stylesheet" href="../output.css">
+	<style>
+		#nameError,
+		#surnameError,
+		#shadeError {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav class="h-[100px] mb-[50px] flex justify-between items-center w-[70%] mx-auto">
+			<div class="logo">
+				<h1 class="font-bold text-[30px]"><i>N</i>87</h1>
+			</div>
+			<ul class="flex gap-[20px] text-[20px] ">
+				<li class="hover:text-red-500 duration-[500ms]"><a href="#">Lider Bord</a>
+				</li>
+				<li class="hover:text-red-500 duration-[500ms]"><a href="../index.html" target="_blank">Baholash</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<table id="liderBord" class="border-solid border-black rounded-[20px] overflow-hidden border-[1px] w-[70%] mx-auto "></table>
+
+
+	<div id="modalContainer" class="w-full  scale-0 duration-[1s]  absolute top-[80px]">
+
+		<form id="modal" class="w-[50%] mx-auto py-[100px] px-[30px] bg-white relative  ">
+			<button id="closeModal" type="button" class="absolute top-[50px] right-[100px]">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					</path>
+					<path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					</path>
+				</svg>
+			</button>
+			<div class="boxForNameAndSurnameEdite flex justify-center gap-[20px]">
+
+				<div class="nameEdite flex flex-col gap-[20px]">
+					<label for="nameEdite" class="font-bold text-[25px]">Ismni o'zgartirish</label>
+					<input type="text" id="nameEdite"
+						class="border-solid border-black border-[1px] px-[20px] py-[10px] rounded-2xl text-[18px] focus-within:text-[#008080] outline-none focus-within:bg-[#D3D3D3]">
+					<p id="nameError"></p>
+				</div>
+
+				<div class="surNameEdite flex flex-col gap-[20px]">
+					<label for="surnameEdite" class="font-bold text-[25px]">Familyani o'zgartirish</label>
+					<input type="text" id="surnameEdite"
+						class="border-solid border-black border-[1px] px-[20px] py-[10px] rounded-2xl text-[18px] focus-within:text-[#008080] outline-none focus-within:bg-[#D3D3D3]">
+					<p id="surnameError"></p>
+				</div>
+
+			</div>
+
+
+			<div class="shadeEdit flex items-center flex-col">
+
+				<label for="shadeEdite" class="font-bold text-[25px]">Bahoni o'zgartirish</label>
+				<input type="text" id="shadeEdite"
+					class="border-solid border-black border-[1px] px-[20px] py-[10px] rounded-2xl text-[18px] focus-within:text-[#008080] outline-none focus-within:bg-[#D3D3D3]">
+				<p id="shadeError"></p>
+
+			</div>
+
+			<div class="btnEdit text-center mt-[40px]">
+				<button class="border-solid border-black border-[1px] rounded-2xl px-[50px] py-[10px]">Submit</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<script src="../js/mainForLiderBoard.js"></script>
+</body>
+
+</html>
